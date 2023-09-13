@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CALCULATOR</title>
+    <style>
+        .calci{
+            width:450px;
+            height:620px;
+            margin-top:90px;
+            background:teal;
+
+        }
+        .text{
+            height:50px;
+            font-size: 15px;
+            font-weight:bold;
+            background: tan;
+            border-color:gray;
+        }
+        .button{
+            color:black;
+            padding: 16px 40px;
+            text-align: center;
+            font-size: 15px;
+            font-weight:bold;
+            border-color:gray;
+        }
+        .answer{
+            background: tan;
+            font-size: 30px;
+            text-align: center;
+            font-weight: bold;
+            padding: 16px 180px;
+
+        }
+        </style>
+</head>
+<body>
+    <center>
+        <div class="calci">
+            <br><br><br>
+            <input type="text" placeholder="Enter Your Value"
+            class="text" id="outputscreen" size="45"><br><br><br>
+            <button class="button" onclick="display('7')">7</button>
+            <button class="button" onclick="display('8')">8</button>
+            <button class="button" onclick="display('9')">9</button>
+            <button class="button" onclick="display('%')">%</button>
+            <br><br>
+
+            <button class="button" onclick="display('4')">4</button>
+            <button class="button" onclick="display('5')">5</button>
+            <button class="button" onclick="display('6')">6</button>
+            <button class="button" onclick="display('*')">*</button>
+            <br><br>
+
+            <button class="button" onclick="display('3')">3</button>
+            <button class="button" onclick="display('2')">2</button>
+            <button class="button" onclick="display('1')">1</button>
+            <button class="button" onclick="display('-')">-</button>
+            <br><br>
+
+            <button class="button" onclick="display('.')">.</button>
+            <button class="button" onclick="display('0')">0</button>
+            <button class="button" onclick="display('+')">+</button>
+            <button class="button" onclick="display('/')">/</button>
+            <br><br>
+
+            <button class="button" onclick="display('(')">(</button>
+            <button class="button" onclick="display(')')">)</button>
+            <button class="button" onclick="clear()">C</button>
+            <button class="button" onclick="Delete()">D</button>
+            <br><br>
+
+            <button class="answer" onclick="calculate()">=</button>
+        </div>
+    </center>
+    <script>
+        let outputscreen=document.getElementById("outputscreen")
+        function display(num){
+            outputscreen.value=outputscreen.value+num+""
+        }
+        function Delete(){
+            outputscreen.value=outputscreen.value.slice(0,-1)
+        }
+        function calculate(){
+            try{
+                outputscreen.value=eval(outputscreen.value)
+            }
+            catch(err){
+                alert("Invalid")
+            }
+        }
+        </script>
+
+
+</body>
+</html>

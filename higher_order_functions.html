@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+        <script>
+            const ages = [32,33,16,40]
+            document.getElementById("p1").innerHTML=ages.map(myfunction)
+            document.getElementById("p2").innerHTML=ages.filter(checkadult)
+            document.getElementById("p3").innerHTML=ages.reduce(myfunc)
+            function myfunction(num){
+                return num*10
+            }
+            function checkadult(age){
+                return age>18
+            }
+            function myfunc(total,n){
+                return total-n
+            }
+        </script>
+    </body>
+</html>
