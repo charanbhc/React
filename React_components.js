@@ -1,16 +1,17 @@
-import Heading from "./Heading";
-import MyList from "./MyList";
+// app.js
+// import Heading from "./Heading";
+// import MyList from "./MyList";
 
-function App() {
-  return (
-    <div>
-      <Heading />
-      <MyList />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div>
+//       <Heading />
+//       <MyList />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App;
 
 
 // Heading .js
@@ -38,3 +39,15 @@ export default App;
 // }
 
 // export default MyList;
+
+// index.js
+// import react from "react";
+// import ReactDOM from "react-dom";
+// import {createRoot} from "react-dom/client"
+// import App from "./Components/App";
+
+
+// const myElement =<App/>;
+
+// const root=createRoot(document.getElementById("root"));
+// root.render(myElement);
